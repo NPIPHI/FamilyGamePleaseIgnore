@@ -26,7 +26,7 @@ body {
 }
 
 .gameCard.old {
-    background-color: lightblue;
+    background-color: rgb(116, 192, 218);
 }
 
 .gameCard.new {
