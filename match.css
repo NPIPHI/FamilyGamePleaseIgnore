@@ -1,0 +1,105 @@
+.MatchingGame {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.gameCard {
+    width: 0px;
+    height: 0px;
+    margin: 5px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    padding-left: 95px;
+    padding-right: 95px;
+    transition: margin 0s 0.06s, padding 0s 0.06s, width 0s 0.06s, height 0s 0.06s, transform 0.2s, background-color 0s 0.06s, visibility 1s;
+    /* user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; */
+    
+}
+
+.gameCard.old {
+    background-color: lightblue;
+}
+
+.gameCard.new {
+    background-color: lightblue;
+}
+.gameCard.selected {
+    width: 180px;
+    height: 270px;
+    background-color: green;
+    margin: 2px;
+    padding: 8px;
+    transform: rotateY(180deg);
+}
+
+.gameCard.wrong {
+    background-color: red;
+    width: 180px;
+    height: 270px;
+    margin: 2px;
+    padding: 8px;
+    transform: rotateY(180deg);
+}
+
+.MatchingGame div img.gameCard.fade {
+    transition: margin 1s, padding 1s, width 1s, height 1s;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 100px;
+    /* visibility: hidden; */
+}
+
+.MatchingGame div.easy .gameCard {
+    width: 180px;
+    height: 270px;
+    margin: 2px;
+    padding: 8px;
+    transform: rotateY(180deg);
+}
+
+.MatchingGame button {
+    height: 3em;
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:none;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+}
+.timer {
+    width: 5em;
+    padding-left: 2em;
+    padding-top: 1em;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:none;
+}
+.MatchingGame button:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.MatchingGame button:active {
+	position:relative;
+	top:1px;
+}

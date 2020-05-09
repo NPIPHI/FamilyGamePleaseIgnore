@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon and Jane matching game</title>
+    <link rel="stylesheet" href="match.css">
+</head>
+
+<body></body>
+<div class="MatchingGame"></div>
+<script>
+    try {
+        let player = window.prompt("Is simon or jane playing the game?");
+        let script = document.createElement("script");
+        if (player[0] == "s" || player[0] == "S") {
+            script.a = "./Simon";
+            script.b = "./Simon";
+            script.total = 16;
+
+        } else if (player[0] == "j" || player[0] == "J") {
+            script.a = "./Jane";
+            script.b = "./Jane";
+            script.total = 18;
+        } else {
+            window.alert("I didn't regocnize that name");
+            throw "bad name"
+        }
+        let cardNumber = window.prompt("how many pairs do you want?");
+        cardNumber = parseInt(cardNumber);
+        cardNumber = Math.min(Math.max(0, cardNumber), script.total);
+        if (isNaN(cardNumber)) cardNumber = 10;
+        script.count = cardNumber;
+        script.src = "match.js"
+        document.body.appendChild(script);
+    } catch (e) {
+        window.location = "";
+    }
+</script>
+</body>
+
+</html>
