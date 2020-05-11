@@ -7,6 +7,8 @@ let timer = document.createElement("div");
 timer.classList.add("timer");
 let time;
 let missingImages = [];
+var total;
+var count;
 {
     let remove = document.currentScript.getAttribute("exclude");
     if(remove){
@@ -75,6 +77,11 @@ cardsContainer.onclick = () => {
         if (selected.s1.match == selected.s2.match) {
             selected.s1.hide();
             selected.s2.hide();
+            count--;
+            if(count == 0){
+                alert("Yay! you matched all the cards!\nClick ok to play again");
+                window.location = '';
+            }
         } else {
             selected.s1.wrong();
             selected.s2.wrong();
@@ -107,8 +114,8 @@ function shuffle(array) {
 
 let folderA = document.currentScript.a;
 let folderB = document.currentScript.b;
-let count = document.currentScript.count;
-let total = document.currentScript.total;
+count = document.currentScript.count;
+total = document.currentScript.total;
 
 let numbers = [];
 for(let i = 1; i <= count; i++){
